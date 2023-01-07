@@ -22,7 +22,7 @@ ReactDOM.render(
     ,document.getElementById('root'));*/
 
 // Part 8 react fragments
-import React from 'react';
+/* import React from 'react';
 import ReactDOM from 'react-dom'; 
 
 ReactDOM.render(
@@ -30,4 +30,28 @@ ReactDOM.render(
         <h1>Lets begin</h1>
         <p>This is a p  tag</p>
     </React.Fragment>
-    ,document.getElementById('root'));
+    ,document.getElementById('root'));*/
+
+//JSX Expressions
+/*import React from "react";
+import ReactDOM from "react-dom"
+
+const name = "aryan";
+
+ReactDOM.render(
+    <h1>My name is {name}</h1>,
+    document.getElementById('root')
+);*/
+
+// part 11 JSX literals
+/*import React from "react";
+import ReactDOM  from "react-dom";
+
+const name = "aryan";
+const lname = "Shirodkar"
+//console.log(`my name is ${name}`);
+
+ReactDOM.render(
+    <h1>{`My name is ${name} ${lname}`}</h1>,
+    document.getElementById('root')
+);*/
