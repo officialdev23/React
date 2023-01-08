@@ -63,6 +63,10 @@ import ReactDOM from "react-dom";
 const name = "aryan";
 
 ReactDOM.render(
-    <h1>my name is {name}</h1>,
+    <>
+    <h1 contentEditable="true">my name is {name}</h1>
+    <img src="http://via.placeholder.com/640x360" alt="React"/> 
+    <img src="http://via.placeholder.com/360x360" alt="React"/> 
+    </>,
     document.getElementById("root")
 );
