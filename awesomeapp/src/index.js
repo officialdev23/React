@@ -55,3 +55,14 @@ ReactDOM.render(
     <h1>{`My name is ${name} ${lname}`}</h1>,
     document.getElementById('root')
 );*/
+
+//part 13 jsx attribute
+import React from "react";
+import ReactDOM from "react-dom";
+
+const name = "aryan";
+
+ReactDOM.render(
+    <h1>my name is {name}</h1>,
+    document.getElementById("root")
+);
