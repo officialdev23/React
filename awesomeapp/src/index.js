@@ -57,7 +57,7 @@ ReactDOM.render(
 );*/
 
 //part 13 jsx attribute
-import React from "react";
+/*import React from "react";
 import ReactDOM from "react-dom";
 
 const name = "aryan";
@@ -69,4 +69,79 @@ ReactDOM.render(
     <img src="http://via.placeholder.com/360x360" alt="React"/> 
     </>,
     document.getElementById("root")
+);*/
+
+//part 14 using css
+
+/*import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+const name = "aryan";
+
+ReactDOM.render(
+    <>
+    <h1 style={{textAlign : 'center', color : 'red', textTransform : 'uppercase '}}>my name is {name}</h1>
+    <img src="http://via.placeholder.com/640x360" alt="React"/> 
+    <img src="http://via.placeholder.com/360x360" alt="React"/> 
+    </>,
+    document.getElementById("root")
+); */
+
+
+//part 17 mini task 3
+
+/*import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+let curDate = new Date().getHours();
+let wish = '';
+const cssStyle = { }
+
+if(curDate>=1 && curDate<12)
+{
+    wish = "Good Morning";
+    cssStyle.color = "red";
+}
+else if(curDate>=12 && curDate<19)
+{
+    wish = "Good Afternoon";
+    cssStyle.color = "blue";
+}
+else
+{
+    wish = "Good Night";
+    cssStyle.color = "blue";
+}
+ReactDOM.render(
+    <>
+        <div className="outer">
+            <div className="inner">
+                <h1>Hello Sir, <span style={cssStyle}> {wish} </span></h1>
+            </div>
+        </div>
+        <h1>Hello</h1>
+    </>,
+    document.getElementById('root')
+);*/
+
+// part 18  Functional Component
+
+import React from "react";
+import ReactDOM from "react-dom";
+import Heading from "./Heading";
+
+ReactDOM.render(
+    <>
+        <Heading>This is Aryan</Heading>
+        <p>This is demo site</p>
+        <ol>
+            <li>Part 1</li>
+            <li>Part 2</li>
+            <li>Part 3</li>
+            <li>Part 4</li>
+        </ol>
+    </>,
+    document.getElementById('root')
 );
