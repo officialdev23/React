@@ -130,18 +130,11 @@ ReactDOM.render(
 
 import React from "react";
 import ReactDOM from "react-dom";
-import Heading from "./Heading";
+import App from "./App.jsx";
 
 ReactDOM.render(
     <>
-        <Heading>This is Aryan</Heading>
-        <p>This is demo site</p>
-        <ol>
-            <li>Part 1</li>
-            <li>Part 2</li>
-            <li>Part 3</li>
-            <li>Part 4</li>
-        </ol>
+        <App/>
     </>,
     document.getElementById('root')
 );
