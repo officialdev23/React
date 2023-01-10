@@ -127,8 +127,7 @@ ReactDOM.render(
 );*/
 
 // part 18  Functional Component
-
-import React from "react";
+/*import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App.jsx";
 
@@ -137,4 +136,14 @@ ReactDOM.render(
         <App/>
     </>,
     document.getElementById('root')
-);
+);*/
+
+//part 21 import and export challenge
+/*import React from "react";
+import ReactDom from "react-dom";
+import App from "./CalcApp";
+
+ReactDom.render(
+   <App/>,
+    document.getElementById('root')
+);*/
