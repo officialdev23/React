@@ -18,11 +18,21 @@ code {
   height: auto;
   background-color: #868686;
 }
-.heading{
-  color: aqua;
+.heading_style{
+  padding:30px 0;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+  background-color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 .card{
-  margin: 3%;
+  margin: 3.5%;
   transition: all 0.4s cubic-bezier(0.175,0.885,0,1);
   background-color: white;
   width: 21.25;
@@ -31,13 +41,12 @@ code {
   float: left;
 }
 .card__img{
-  width: inherit;
-  height: inherit;
+  width: 300px;
+  height: 200px;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 16px 24px 24px 24px;
   background-color: white;  
-
 }
 .card__info{
   background-color: white;
