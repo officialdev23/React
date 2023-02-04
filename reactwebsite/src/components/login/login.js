@@ -38,7 +38,7 @@ const Login = () =>{
         console.log(flag)
         if(flag === "1")
         {
-            navigate("/")
+            navigate("/home")
             flag = 0;
         }
 
