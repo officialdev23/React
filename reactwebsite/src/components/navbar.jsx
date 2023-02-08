@@ -17,7 +17,7 @@ const Navbar =() =>{
                         </ul>
                     </div>
                     <div className="bt">
-                        <a href="#">Find More</a>
+                        <a href="http://localhost:3000/about">Find More</a>
                     </div>
                 </nav>
         </>

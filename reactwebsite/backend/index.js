@@ -53,7 +53,7 @@ app.post("/login",(req,res) => {
         }
         else
         {
-            res.send({message : "user dosent exist"})
+            res.send({message : "User dosent exist"})
             //alert("user does'nt exist")
         }
     })

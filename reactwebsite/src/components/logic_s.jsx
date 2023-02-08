@@ -85,57 +85,70 @@ const Logic = () => {
 
     ];
 
-    // const question = document.querySelector('.question');
-    // const option1 = document.querySelector("#option1");
-    // const option2 = document.querySelector("#option2");
-    // const option3 = document.querySelector("#option3");
-    // const option4 = document.querySelector("#option4");
-    // const submit = document.querySelector("#submit");
-    // const answers = document.querySelectorAll(".answer");
-    // const showScore = document.querySelector('#showScore');
+    const question = document.querySelector('.question');
+    const option1 = document.querySelector("#option1");
+    const option2 = document.querySelector("#option2");
+    const option3 = document.querySelector("#option3");
+    const option4 = document.querySelector("#option4");
+    const submit = document.querySelector("#submit");
+    const answers = document.querySelectorAll(".answer");
+    //const showScore = document.querySelector('#showScore');
     
-    // let questionCount = 0
-    // let score = 0
+    let questionCount = 0
+    let score = 0
 
-    // const loadQuestion = () =>{
-    //     const questionList = sciencedb[questionCount];
-    //     question.innerText = questionList.question;
-    //     option1.innerText = questionList.a;
-    //     option2.innerText = questionList.b;
-    //     option3.innerText = questionList.c;
-    //     option4.innerText = questionList.d;
-    // }
-    
-    // loadQuestion();
-
-    // const getCheckedAnswer = () =>{
-    //     let answer;
-    //     answers.forEach((curAnsEle)=>{
-    //         if(curAnsEle.checked){
-    //             answer = curAnsEle.id;
-    //         }
-    //         // console.log(answer)
-            
-            
-    //     });
-    //     return answer
-    // }
-
-    // submit.addEventListener('click', () =>{
-    //     const checkedAnswer = getCheckedAnswer();
-    //     console.log(checkedAnswer)
-
-    //     if(checkedAnswer === sciencedb[questionCount].ans){
-    //         score++;
-    //     };
-    //     questionCount++;
-    //     if(questionCount < sciencedb.length){
-    //         loadQuestion()
-    //     }else{
-    //         alert("Your Score is "+ score + " out of " + sciencedb.length)
-    //     }
+    const loadQuestion = () =>{
+        if(question != null)
+        {
+            const questionList = sciencedb[questionCount];
+            question.innerText = questionList.question;
+            option1.innerText = questionList.a;
+            option2.innerText = questionList.b;
+            option3.innerText = questionList.c;
+            option4.innerText = questionList.d;
+        }
         
-    // });
+    }
+
+    window.onload = function()
+    {
+        loadQuestion();
+    }
+    
+    loadQuestion();
+
+    const getCheckedAnswer = () =>{
+        let answer;
+        answers.forEach((curAnsEle)=>{
+            if(curAnsEle.checked){
+                answer = curAnsEle.id;
+            }
+            // console.log(answer)
+            
+            
+        });
+        return answer
+    }
+
+    if(submit)
+    {
+        submit.addEventListener('click', () =>{
+            const checkedAnswer = getCheckedAnswer();
+            console.log(checkedAnswer)
+    
+            if(checkedAnswer === sciencedb[questionCount].ans){
+                score++;
+            };
+            questionCount++;
+            if(questionCount < sciencedb.length){
+                loadQuestion()
+            }else{
+                alert("Your Score is "+ score + " out of " + sciencedb.length)
+            }
+            
+        });
+    }
+    
 
 
 }
