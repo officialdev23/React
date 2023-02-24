@@ -1,9 +1,9 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.wrapper{
+.wrappe{
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -26,7 +26,7 @@
     height: 400px;
 }
 
-.content{
+.conten{
     width: 60%;
     float: left;
     margin-left: 250px;
@@ -48,4 +48,4 @@ p{
     font-size: 17px;
     margin-top: 10px;
     line-height: 1.5;
-} */
+}

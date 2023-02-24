@@ -38,6 +38,7 @@ const Register = () =>{
     }
     return(
         <div className="register">
+            <h1 className="company-name"><span>Guiding</span> Angles</h1>
             {console.log(user)}
             <h1>Register</h1>
             <input type="text" name="name" value={user.name} placeholder="Enter your name" onChange={handleChange} required></input>
