@@ -6,7 +6,7 @@ const Navbar =() =>{
         <>
             <nav className="content">
                     <div className="logo">
-                        <a href="#"><span>GUIDING</span>ANGLES</a>
+                        <p><span>GUIDING</span>ANGELS</p>
 
                     </div>
                     <div className="menu">
@@ -20,7 +20,7 @@ const Navbar =() =>{
                         <a href="http://localhost:3000/about">Find More</a>
                     </div>
                 </nav>
-        </>
+        </> 
     )
 };
 

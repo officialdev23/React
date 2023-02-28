@@ -141,7 +141,7 @@ const ArtsQuiz = () =>{
                     <div className="score-section">
                         <div className="sc">You have scored {score} out of {Questionbank.length}</div>
                         <>
-                            <button type="submit" onClick={resetQuiz}>Click to play again</button>
+                            <button type="submit" onClick={resetQuiz}>Click to take the test again</button>
                         </>
                     </div>
                 ) : (

@@ -46,7 +46,7 @@ const Login = () =>{
 
     return(
         <div className="login">
-            <h1 className="company-name"><span>Guiding</span> Angles</h1>
+            <h1 className="company-name"><span>Guiding</span> Angels</h1>
             <h1>Login</h1>
             <input type="text" name="email" value={user.email} placeholder="Enter you Login Id/Email" onChange={handleChange}></input>
             <input type="Password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>

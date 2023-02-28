@@ -3,6 +3,7 @@ import "./register.css"
 import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
+
 const Register = () =>{
 
     const navigate = useNavigate();
@@ -38,11 +39,11 @@ const Register = () =>{
     }
     return(
         <div className="register">
-            <h1 className="company-name"><span>Guiding</span> Angles</h1>
+            <h1 className="company-name"><span>Guiding</span> Angels</h1>
             {console.log(user)}
             <h1>Register</h1>
             <input type="text" name="name" value={user.name} placeholder="Enter your name" onChange={handleChange} required></input>
-            <input type="text" name="email" value={user.email} placeholder="Enter your Login Id/Email" onChange={handleChange}></input>
+            <input type="text" name="email" value={user.email} placeholder="Enter your Email" onChange={handleChange}></input>
             <input type="text" name="age" value={user.age} placeholder="Enter your Age" onChange={handleChange}></input>
             <input type="Password" name="password" value={user.password} placeholder="Enter your password" onChange={handleChange}></input>
             <input type="Password" name="reEnterPassword" value={user.reEnterPassword} placeholder="Re-enter your password" onChange={handleChange}></input>

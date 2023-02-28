@@ -1,6 +1,10 @@
 const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
+// const token = require("../backend/token");
+// const sendEmail = require("../backend/sendEmail");
+// const crypto = require("crypto");
+const nodemailer = require("nodemailer")
 // const Jwt = require("jsonwebtoken")
 const app = express()
 app.use(express.json())
@@ -25,7 +29,8 @@ const userSchema = new mongoose.Schema({
     name : String,
     email : String,
     password : String,
-    age : Number
+    age : Number,
+    verified:{type:Boolean, default:false}
 })
 
 //creating model for schema
@@ -79,13 +84,36 @@ app.post("/register",(req,res) => {
             password : password,
             age : age
             })
-            user.save(err => {
+            user.save(async err => {
             if(err)
             {
                 res.send(err)
             }
             else
             {
+
+                let mailTransporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: 'guidinganglea@gmail.com',
+                        pass: 'pcumhmusajehcabt'
+                    }
+                });
+                 
+                let mailDetails = {
+                    from: 'guidinganglea@gmail.com',
+                    to: user.email,
+                    subject: 'Congatulations Your Bright Future is Here',
+                    text: 'We are thrilled to extend a warm welcome to you on behalf of GUIDING ANGELS! We are excited to have you as a part of our team and look forward to working with you. As you settle in, please take some time to familiarize yourself with our culture, values, and goals. We are committed to creating a collaborative and supportive environment where everyone can thrive and achieve their full potential. We are confident that your skills, experience, and unique perspective will contribute to our success as we work towards our shared objectives. If you have any questions or concerns, please do not hesitate to reach out to us or any member of our team. We are here to support you every step of the way. Once again, welcome aboard! We look forward to getting to know you better and achieving great things together. Best regards,'
+                };
+                 
+                mailTransporter.sendMail(mailDetails, function(err, data) {
+                    if(err) {
+                        console.log('Error Occurs');
+                    } else {
+                        console.log('Email sent successfully');
+                    }
+                });
                 res.send({message: "sucessfully registered. Kindly login"})
                 
               //  alert("Sucessfully")
